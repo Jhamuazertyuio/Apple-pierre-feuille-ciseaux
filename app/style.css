@@ -1,0 +1,153 @@
+.parent {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+
+.box {
+    background-color: black;
+    min-height: 400px;
+    width: 50%;
+    max-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: 50%;
+    max-height: 400px;
+}
+
+.heading {
+    color: white;
+    font: -apple-system-title0;
+    font-size : xxx-large;
+    text-align: center;
+}
+
+.subtitle {
+    color: white;
+    font: -apple-system-body;
+    font-size: x-large;
+    text-align: center;
+}
+
+.button {
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 17px;
+    line-height: 1.17648;
+    font-weight: 400;
+    letter-spacing: -0.022em;
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border-style: solid;
+    border-width: 1px;
+    min-width: 30px;
+    padding: 7px 15px;
+    border-radius: 980px;
+    background: rgb(0, 113, 227);
+    color: rgb(255, 255, 255);
+    border-color: rgba(0, 0, 0, 0);
+    --sk-button-margin-horizontal: 14px;
+    --sk-button-margin-vertical: 14px;
+    text-decoration: none;
+}
+
+.button-tertiary:hover, .button-tertiary:focus {
+background: #0077ED;
+color: #fff;
+border-color: transparent;
+}
+
+.button-primary:hover {
+    background-color: rgb(39, 136, 232);
+}
+
+.button:active, .button-primary:active {
+background: #0e4984;
+color: #fff;
+border-color: transparent;
+}
+
+.button-tertiary {
+background: rgba(0,0,0,0);
+color: #06c;
+border-color: #06c;
+}
+
+h2 { 
+   color: white;
+    font: -apple-system-body;
+    font-size: x-large;
+    text-align: center;
+    margin-bottom: 0%;
+}
+
+.clic {
+    font-size: 100px;
+    background: #06c;
+    border-radius: 980px;
+    border: 0cm;
+
+}
+
+.choix {
+    text-align: center;
+    font-size: 100px;
+    background: rgb(129, 129, 129);
+    border: rgb(61, 61, 61);
+    height: 125px;
+    width: 125px;
+    margin: auto;
+    border-radius: 980px;
+    border-style: solid;
+    border-width: 2px;
+}
+
+.choix2 {
+    text-align: center;
+    font-size: 100px;
+    height: auto;
+    width: fit-content;
+    margin: auto;
+}
+
+#minigame {
+    background-color: black;
+    margin-top: 10px;
+    min-height: 400px;
+    width: 100%;
+    max-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.clic:hover {
+    background-color: rgb(39, 136, 232);
+}
+
+.clic:active {
+    background-color: #0e4984;
+}
+
+.active {
+    background-color: #062444;
+}
+
+.active:hover {
+    background-color: #0a417c;
+}
+
+.results {
+    color: #fff;
+    text-align: center;
+    font: -apple-system-body;
+    padding: 20px;
+}

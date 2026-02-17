@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="box">
+            <h2 class="heading">MacBook Pro</h2>
+            <p class="subtitle">Boosté par la M5.</p>
+            <div class="buttons">
+                <a class="button button-primary" href="/fr/macbook-pro/" target="_self" rel="follow"
+                    data-analytics-region="learn more" data-analytics-title="learn more - macbook pro 14-inch with m5"
+                    aria-label="En savoir plus, MacBook Pro 14 pouces avec M5">En savoir plus</a>
+                <a class="button button-tertiary" href="/fr/shop/goto/buy_mac/macbook_pro/14_inch" target="_self"
+                    rel="follow" data-analytics-region="buy" data-analytics-title="buy - macbook pro 14-inch with m5"
+                    aria-label="Acheter, MacBook Pro 14 pouces avec M5">Acheter</a>
+            </div>
+            <img src="https://www.apple.com/v/macbook-pro/at/images/overview/welcome/hero_endframe__e4ls9pihykya_xlarge.jpg"
+                alt="MacBook Pro Computer">
+        </div>
+        <div class="box">
+            <h2 class="heading">iPad Pro</h2>
+            <p class="subtitle">Performance et capacités hors normes.</p>
+            <div class="buttons">
+                <a class="button button-primary" href="/fr/macbook-pro/" target="_self" rel="follow"
+                    data-analytics-region="learn more" data-analytics-title="learn more - macbook pro 14-inch with m5"
+                    aria-label="En savoir plus, MacBook Pro 14 pouces avec M5">En savoir plus</a>
+                <a class="button button-tertiary" href="/fr/shop/goto/buy_mac/macbook_pro/14_inch" target="_self"
+                    rel="follow" data-analytics-region="buy" data-analytics-title="buy - macbook pro 14-inch with m5"
+                    aria-label="Acheter, MacBook Pro 14 pouces avec M5">Acheter</a>
+            </div>
+            <img src="https://m.media-amazon.com/images/I/71W4VApb2+L.jpg" alt="MacBook Pro Computer">
+        </div>
+    </div>
+    <div id="minigame">
+        <div>
+            <h2 class="heading">Pierre Feuille Ciseaux</h2>
+            <p class="subtitle">Choix du bot:</p>
+            <div id="Choix" class="choix"></div>
+            <p></p>
+            <p class="subtitle">Votre choix:</p>
+            <div class="choix2">
+                <button class="clic" onclick="rps(this), dodajAktywne(this)" id="a-Pierre">👊</button>
+                <button class="clic" onclick="rps(this), dodajAktywne(this)" id="a-Feuille">✋</button>
+                <button class="clic" onclick="rps(this), dodajAktywne(this)" id="a-Ciseaux">✌️</button>
+            </div>
+            <div class="results" id="results">
+            </div>
+        </div>
+    </div>
+    <script>
+        const options = ["👊", "✋", "✌️"]
+        function rps(choix2) {
+            const choix = options[Math.floor(Math.random() * options.length)];
+            document.getElementById("Choix").innerHTML = choix;
+
+            victoryCheck(choix, choix2.innerHTML)
+        }
+
+        function dodajAktywne(elem) {
+            var buttons = document.getElementsByClassName('clic');
+            for (let i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove('active');
+            }
+            elem.classList.add('active');
+        }
+
+        function victoryCheck(choix, choix2) {
+            if (choix === choix2) {
+                document.getElementById("results").innerHTML = "Égalité!";
+            }
+
+            if (choix === "👊") {
+                if (choix2 === "✋") {
+                    document.getElementById("results").innerHTML = "Victoire!";
+                }
+
+                if (choix2 === "✌️") {
+                    document.getElementById("results").innerHTML = "Défaite...";
+                }
+
+            }
+
+            if (choix === "✋") {
+                if (choix2 === "✌️") {
+                    document.getElementById("results").innerHTML = "Victoire!";
+                }
+
+                if (choix2 === "👊") {
+                    document.getElementById("results").innerHTML = "Défaite...";
+                }
+
+            }
+
+            if (choix === "✌️") {
+                if (choix2 === "👊") {
+                    document.getElementById("results").innerHTML = "Victoire!";
+                }
+
+                if (choix2 === "✋") {
+                    document.getElementById("results").innerHTML = "Défaite...";
+                }
+
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
